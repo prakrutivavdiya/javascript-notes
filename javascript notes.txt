@@ -1,9 +1,0 @@
-JavaScript is synchronous, single threaded
-
-When running JavaScript program, it creates an execution context(thread of execution) and the program runs inside it.
-
-When javascript is executed, all the variables and functions are declared first and stored as key value pairs. Variables are given undefined value and functions are given their definition as value.
-
-each function invocation creates new execution context(memory + code). Even if same function is invoked again, it creates new context.
-
-

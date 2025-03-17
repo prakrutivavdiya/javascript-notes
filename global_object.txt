@@ -1,0 +1,6 @@
+when we execute empty js file: it still creates 
+1) execution context 
+2) global object (window in case we have run it in browser)
+3) "this" key word (points to window object in case we have run program in browser)
+
+when we create any variable that is not in any function, it gets attached to global object (window in case of browser)

@@ -1,0 +1,21 @@
+JavaScript is synchronous, single threaded
+
+When running JavaScript program, it creates a global execution context(thread of execution) and the program runs inside it.
+
+When JavaScript is executed, all the variables and functions are declared first and stored as key value pairs. Variables are given undefined value and functions are given their definition as value.
+
+each function invocation creates new execution context(memory + code). Even if same function is invoked again, it creates new context.
+
+JavaScript uses stack (call stack) to manage execution contexts.
+
+hoisting: accessing fn and var before initializing it(it doesn't give error).
+
+When function is created with variable assignment
+(
+	var x = () =>{ .... }
+	var y = function(){....}
+i.e. not like 
+	function z(){....}
+) 
+Its definition doesn't get stored at the time of memory allocation. JavaScript treats it as a normal variable and assigns undefined So you can't access before initializing.
+
