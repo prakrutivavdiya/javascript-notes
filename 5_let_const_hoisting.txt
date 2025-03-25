@@ -1,0 +1,59 @@
+hoisting: accessing fn and var before initializing it(it doesn't give error).
+
+When function is created with variable assignment
+(
+	var x = () =>{ .... }
+	var y = function(){....}
+i.e. not like 
+	function z(){....}
+) 
+Its definition doesn't get stored at the time of memory allocation. JavaScript treats it as a normal variable and assigns undefined So you can't access before initializing.
+
+let and const are hoisted but in temporal dead zone "until initialized", i.e. if we try to access them before declaration, gives reference error.
+let and const are not attached to global object.
+
+1)	let a=10;
+	let a=100;      //gives syntax error
+2)	let b=10;
+	var b=2;		//gives syntax error
+3)	var x=1;
+	var x=2;		//works
+4)	const a=10;
+	let a=100;      //gives syntax error
+5)	const a;
+	a=100;      //gives type error	
+
+
+Block:	- defined by { }. used from combining statements into group.
+		- enables writing multiple statements where JavaScript expects one statement.
+		- let and const are block scoped, var is function scoped
+
+shadowing 	- variable redeclared inside scope shadows variable declared outside scope (both share same memory space)
+			- 	var a=10;
+				{
+					var a=20;
+					console.log(a);  //20
+				}
+				console.log(a); //20
+
+			- if we do same thing using "let" printed values are 20,10 because they don't share same memory space. Outer a is in script(separate memory where let and const are hoisted) and inner a is in that block's scope.  (same happens with const)
+			- works same way for function definition block.
+
+			- let a=20;
+			  function x(){
+			  var a=20; //works because var is fn scope and can shadow as it is not crossing its boundary
+		 	  }
+			- const z=1;
+				{
+					const z=2;  //works
+				}
+illegal shadowingzz
+		- let a=20;
+		  {
+			var a=10;
+		  }
+		- gives error "identifier a has already been declared"
+
+		
+
+

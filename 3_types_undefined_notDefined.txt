@@ -1,0 +1,8 @@
+undefined: memory allocated but value not assigned.
+not defined: memory not allocated
+
+javascript is loosly typed language
+
+typeOf undefined : undefined
+typeOf NaN: number
+typeOf null : Object

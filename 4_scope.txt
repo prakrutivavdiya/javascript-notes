@@ -1,0 +1,21 @@
+lexical environment : its the local memory along with the lexical environment of its parent
+lexical: in hierarchy or in sequence
+
+in any function's context, you get a reference to the lexical environment of its parent along with variables defined in that particular function.
+So it can access variables defined in its parent.
+
+in case of global execution context, this pointer points to null.
+
+i.e. function a(){
+        function b(){
+            function c(){
+
+            }
+        }
+    }
+
+these pointers are   | c |--> | b |--> | a |--> | global context |--> null
+
+when you try to access any variable at any level,
+javascript first tries to access it in local memory, then in the lexical context hierarchy upwards(to consecutive parents).
+this way of finding variable is called "lexical chain" or "scope chain".

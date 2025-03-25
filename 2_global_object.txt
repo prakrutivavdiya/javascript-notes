@@ -4,3 +4,12 @@ when we execute empty js file: it still creates
 3) "this" key word (points to window object in case we have run program in browser)
 
 when we create any variable that is not in any function, it gets attached to global object (window in case of browser)
+
+i.e. 
+var x=10;
+function b(){
+    var a=5;
+}
+
+here x and b will get attached to window object. So we can access them using window.x, this.x and window.b, this.b
+also we can access like x and b independently i.e. console.log(x,b)
