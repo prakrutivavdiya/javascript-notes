@@ -23,6 +23,9 @@ let and const are not attached to global object.
 5)	const a;
 	a=100;      //gives type error	
 
+function declarations are hoisted first before var declarations.
+
+
 
 Block:	- defined by { }. used from combining statements into group.
 		- enables writing multiple statements where JavaScript expects one statement.
@@ -47,7 +50,7 @@ shadowing 	- variable redeclared inside scope shadows variable declared outside 
 				{
 					const z=2;  //works
 				}
-illegal shadowingzz
+illegal shadowing
 		- let a=20;
 		  {
 			var a=10;

@@ -1,0 +1,15 @@
+closure:function along with its lexical scope forms a closure.
+
+-   you can assign functions to variables, pass in other fn as argument or return function def as output of other function;
+
+-   but wherever you send the fn def, its lexical scope is bundled with it.
+
+function x(){
+    let a=10;
+    function b(){
+        console.log(a);
+    }
+    return b;
+}
+let q=x();  //has b's definition
+q();        //10  as b's lexical scope includes a in it and its value is 10 in scope

@@ -1,0 +1,6 @@
+JavaScript Event Loop & Execution Order
+
+JavaScript execution follows these steps:
+Synchronous code runs first (added to the call stack).
+Microtasks (Promises, queueMicrotask) run next before moving to macrotasks.
+Macrotasks (setTimeout, setInterval, setImmediate) run after microtasks.
